@@ -1,7 +1,19 @@
 import Sidebar from "@/components/conference/Sidebar";
 import React from "react";
+//Queries
+import { CONFERENCE } from "./../../queries/conferenceQueries";
+//Hook
+import useGetDataById from "@/hooks/useGetDataById";
+import { useRouter } from "next/router";
 
 function Conference() {
+  const router = useRouter();
+  const { slug } = router.query;
+
+  const { error, loading, data } = useGetDataById(CONFERENCE, slug);
+
+  console.log({ error, loading, data });
+
   return (
     <div className="my-10">
       <div>
