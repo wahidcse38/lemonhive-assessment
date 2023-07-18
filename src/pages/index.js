@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-//Component
-import Confarences from "@/components/confarences/Confarences";
 //Queries
 import { CONFERENCES } from "../queries/conferenceQueries";
 //Hook
 import useGetAllData from "@/hooks/useGetAllData";
+//Component
+import ConferencesForSmallDevices from "@/components/home/conferences/ConferencesForSmallDevices";
 
 export default function Home() {
   const [conf, setConf] = useState([]);
@@ -22,9 +22,10 @@ export default function Home() {
       });
     }
   }, [data]);
+
   return (
     <div className="container">
-      <Confarences />
+      <ConferencesForSmallDevices conf={conf} />
     </div>
   );
 }
