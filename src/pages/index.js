@@ -3,8 +3,11 @@ import { useEffect, useState } from "react";
 import { CONFERENCES } from "../queries/conferenceQueries";
 //Hook
 import useGetAllData from "@/hooks/useGetAllData";
+//Spinner
+import { RotatingLines } from "react-loader-spinner";
 //Component
 import ConferencesForSmallDevices from "@/components/home/conferences/ConferencesForSmallDevices";
+import ConferencesForLargeDevices from "@/components/home/conferences/ConferencesForLargeDevices";
 
 export default function Home() {
   const [conf, setConf] = useState([]);
@@ -25,7 +28,24 @@ export default function Home() {
 
   return (
     <div className="container">
-      <ConferencesForSmallDevices conf={conf} />
+      {loading && (
+        <div className="h-screen flex justify-center items-center">
+          <RotatingLines
+            strokeColor="#FFC93E"
+            strokeWidth="3"
+            animationDuration="1"
+            width="56"
+            visible={true}
+            className="text-midnight"
+          />
+        </div>
+      )}
+      <div className="block md:hidden">
+        <ConferencesForSmallDevices conf={conf} />
+      </div>
+      <div className="hidden md:block">
+        <ConferencesForLargeDevices conf={conf} />
+      </div>
     </div>
   );
 }

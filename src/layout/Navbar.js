@@ -8,15 +8,20 @@ import Menu from "./Menu";
 
 //hook
 import useToggle from "@/hooks/useToggle";
+import Link from "next/link";
 
 function Navbar() {
   const [isToggle, toggle] = useToggle();
   return (
     <div className="">
       <div className="flex justify-between items-center py-10 relative">
-        <div className="w-[100px] relative" style={{ aspectRatio: 3.6 }}>
+        <Link
+          href={"/"}
+          className="w-[100px] relative"
+          style={{ aspectRatio: 3.6 }}
+        >
           <Image src={logo} alt="logo" fill className="object-contain" />
-        </div>
+        </Link>
         <div className="hidden md:block">
           <NavItem />
         </div>
