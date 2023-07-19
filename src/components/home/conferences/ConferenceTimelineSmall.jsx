@@ -4,7 +4,7 @@ import { BiSolidZap } from "react-icons/bi";
 //Date Formate
 import moment from "moment";
 
-function Conference({ conference, isLast }) {
+function ConferenceTimelineSmall({ conference, isLast }) {
   const startDate = moment(new Date(conference?.startDate)).format(
     "D MMMM YYYY"
   );
@@ -63,4 +63,4 @@ function Conference({ conference, isLast }) {
   );
 }
 
-export default Conference;
+export default ConferenceTimelineSmall;

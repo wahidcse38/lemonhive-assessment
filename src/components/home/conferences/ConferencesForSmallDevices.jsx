@@ -1,5 +1,5 @@
 import React from "react";
-import Conference from "./Conference";
+import ConferenceTimelineSmall from "./ConferenceTimelineSmall";
 
 function ConferencesForSmallDevices({ conf }) {
   return (
@@ -9,15 +9,12 @@ function ConferencesForSmallDevices({ conf }) {
       </h3>
       <div className="ps-4">
         {conf?.map((conference, i, conferences) => (
-          <Conference
+          <ConferenceTimelineSmall
             key={conference.id}
             conference={conference}
             isLast={i + 1 === conferences.length}
           />
         ))}
-
-        {/* <Conference />
-        <Conference isLast /> */}
       </div>
     </div>
   );
