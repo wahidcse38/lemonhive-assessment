@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 import logo from "../assets/logo/logo_white.png";
 
@@ -27,6 +28,4 @@ function Footer() {
     </div>
   );
 }
-import Image from "next/image";
-
 export default Footer;

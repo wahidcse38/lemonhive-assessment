@@ -13,9 +13,9 @@ const inter = Inter({
 
 function Layout({ children }) {
   return (
-    <div className={`${inter.className} px-5`}>
+    <div className={`${inter.className}`}>
       <Hero />
-      <main className="container">{children}</main>
+      <main className="container px-5">{children}</main>
       <Footer />
     </div>
   );

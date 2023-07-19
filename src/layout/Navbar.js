@@ -13,7 +13,7 @@ import Link from "next/link";
 function Navbar() {
   const [isToggle, toggle] = useToggle();
   return (
-    <div className="">
+    <div className="px-5">
       <div className="flex justify-between items-center py-10 relative">
         <Link
           href={"/"}
