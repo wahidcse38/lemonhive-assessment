@@ -19,13 +19,13 @@ function HeroForLargeDevices() {
           </p>
         </div>
       </div>
-      <div class="grid grid-rows-7 grid-cols-5 grid-flow-col gap-5">
-        <div class="row-span-2 col-span-3 ">
+      <div className="grid grid-rows-7 grid-cols-5 grid-flow-col gap-5">
+        <div className="row-span-2 col-span-3 ">
           <p className="font-bold text-8xl md:text-6xl text-downriver text-right">
             Conference
           </p>
         </div>
-        <div class="row-span-4 col-span-3 ">
+        <div className="row-span-4 col-span-3 ">
           <div className="grid grid-cols-3 grid-rows-4 h-full gap-5">
             <div
               className="w-full relative col-span-1  row-span-4"
@@ -44,7 +44,7 @@ function HeroForLargeDevices() {
             </div>
           </div>
         </div>
-        <div class="row-span-6 col-span-2 ">
+        <div className="row-span-6 col-span-2 ">
           <div className="relative my-8 md:my-0">
             <div className="w-full relative" style={{ aspectRatio: 1 }}>
               <Image src={heroImg1} alt="img" fill className="object-contain" />

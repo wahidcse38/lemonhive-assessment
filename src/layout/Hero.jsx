@@ -6,7 +6,6 @@ import HeroForLargeDevices from "./HeroForLargeDevices";
 
 function Hero() {
   const router = useRouter();
-  console.log({ router });
   return (
     <div
       className={`${

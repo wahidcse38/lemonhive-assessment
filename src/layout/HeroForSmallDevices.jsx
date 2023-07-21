@@ -18,9 +18,7 @@ function HeroForSmallDevices() {
         <div className="inline-block">
           <h1 className=" font-bold text-5xl text-downriver inline float-right relative">
             React
-            <span className="absolute bottom-[85%] right-[90%]" s>
-              {heroImg}
-            </span>
+            <span className="absolute bottom-[85%] right-[90%]">{heroImg}</span>
           </h1>
           <h1 className=" font-bold text-5xl text-downriver">Conference</h1>
         </div>

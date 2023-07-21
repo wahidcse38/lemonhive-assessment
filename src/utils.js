@@ -123,12 +123,12 @@ export const sponsors = [
     badge: "🥇 Gold Sponsor",
     logos: [
       {
-        id: 1,
+        id: 101,
         image: layers,
         name: "layers",
       },
       {
-        id: 2,
+        id: 102,
         image: sisyphus,
         name: "sisyphus",
       },
@@ -139,17 +139,17 @@ export const sponsors = [
     badge: "🥈 Silver Sponsors",
     logos: [
       {
-        id: 1,
+        id: 201,
         image: circooles,
         name: "circooles",
       },
       {
-        id: 2,
+        id: 202,
         image: catalog,
         name: "catalog",
       },
       {
-        id: 3,
+        id: 203,
         image: gofore,
         name: "gofore",
       },
@@ -160,17 +160,17 @@ export const sponsors = [
     badge: "🥉 Bronze Sponsors",
     logos: [
       {
-        id: 1,
+        id: 301,
         image: sisyphus,
         name: "sisyphus",
       },
       {
-        id: 2,
+        id: 302,
         image: quotient,
         name: "quotient",
       },
       {
-        id: 3,
+        id: 303,
         image: layers,
         name: "layers",
       },
