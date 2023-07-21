@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react";
-import SidebarItem from "./common/SidebarItem";
+//Component
+import Tab from "./common/Tab";
+import Content from "./common/Content";
+import ScheduleContent from "./common/ScheduleContent";
+
+//Helper function
+import { handleContentSet } from "@/hooks/helperFunction/handleContentSet";
 
 const tabText = [
   {
@@ -23,118 +29,36 @@ const tabText = [
 function ConferenceDetailForSmallDevices({ conference }) {
   const [section, setSection] = useState("Organizer");
   const [state, setState] = useState([]);
-  const makeObjToArr = (obj) => {
-    return [
-      {
-        id: 1,
-        name: "Organizer",
-        data: obj?.organizers.map((item, i) => {
-          return {
-            ...item,
-            id: i + 1,
-          };
-        }),
-      },
-      {
-        id: 2,
-        name: "Speakers",
-        data: obj?.speakers.map((item, i) => {
-          return {
-            ...item,
-            id: i + 1,
-          };
-        }),
-      },
-      {
-        id: 3,
-        name: "Schedule",
-        data: obj?.schedules.map((item, i) => {
-          return {
-            ...item,
-            id: i + 1,
-          };
-        }),
-      },
-      {
-        id: 4,
-        name: "Sponsors",
-        data: obj?.sponsors.map((item, i) => {
-          return {
-            ...item,
-            id: i + 1,
-          };
-        }),
-      },
-    ];
-  };
 
   useEffect(() => {
-    let arr = [];
-    switch (section) {
-      case "Organizer":
-        setState([]);
-        conference?.organizers?.forEach((item, i) => {
-          let obj = {
-            ...item,
-            id: i + 1,
-          };
-          arr.push({ ...obj });
-        });
-        return setState((prevArr) => {
-          return [...prevArr, ...arr];
-        });
-      case "Speakers":
-        setState([]);
-        conference?.speakers?.forEach((item, i) => {
-          let obj = {
-            ...item,
-            id: i + 1,
-          };
-          arr.push({ ...obj });
-        });
-        return setState((prevArr) => {
-          return [...prevArr, ...arr];
-        });
-      case "Schedule":
-        setState([]);
-        conference?.schedules?.forEach((item, i) => {
-          let obj = {
-            ...item,
-            id: i + 1,
-          };
-          arr.push({ ...obj });
-        });
-        return setState((prevArr) => {
-          return [...prevArr, ...arr];
-        });
-      case "Sponsors":
-        setState([]);
-        conference?.sponsors?.forEach((item, i) => {
-          let obj = {
-            ...item,
-            id: i + 1,
-          };
-          arr.push({ ...obj });
-        });
-        return setState((prevArr) => {
-          return [...prevArr, ...arr];
-        });
-
-      default:
-        return state;
-    }
+    handleContentSet(section, setState, state, conference);
   }, [conference, section]);
 
   return (
     <div className="space-y-6">
       {tabText.map((item) => (
-        <SidebarItem
-          key={item?.id}
-          item={item}
-          setSection={setSection}
-          section={section}
-          state={state}
-        />
+        <div key={item?.id} className="w-full space-y-6">
+          <Tab item={item} setSection={setSection} section={section} />
+          <div className="bg-light rounded-lg">
+            {section === "Schedule"
+              ? state?.map((eachData) => (
+                  <div
+                    key={eachData.id}
+                    className={`${item?.name === section ? "block" : "hidden"}`}
+                  >
+                    <ScheduleContent eachData={eachData} />
+                  </div>
+                ))
+              : state.map((eachData) => (
+                  <div
+                    key={eachData.id}
+                    className={`${item?.name === section ? "block" : "hidden"}`}
+                  >
+                    <Content key={eachData.id} eachData={eachData} />
+                  </div>
+                ))}
+          </div>
+        </div>
       ))}
     </div>
   );

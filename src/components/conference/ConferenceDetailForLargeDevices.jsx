@@ -6,11 +6,11 @@ import ScheduleContent from "./common/ScheduleContent";
 //Dragable
 import { DndContext, closestCenter } from "@dnd-kit/core";
 import {
-  arrayMove,
   SortableContext,
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
 
+//Helper Function
 import { handleContentDrag } from "@/hooks/helperFunction/handleDragItem";
 import { handleContentSet } from "@/hooks/helperFunction/handleContentSet";
 
