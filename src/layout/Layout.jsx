@@ -2,7 +2,6 @@ import React from "react";
 
 import { Inter } from "next/font/google";
 
-import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Hero from "./Hero";
 

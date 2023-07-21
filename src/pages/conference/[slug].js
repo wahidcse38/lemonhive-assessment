@@ -28,7 +28,7 @@ function Conference() {
           </p>
         </div>
         {loading ? (
-          <div className="flex justify-center items-center">
+          <div className="h-screen flex justify-center items-center">
             <RotatingLines
               strokeColor="#FFC93E"
               strokeWidth="3"

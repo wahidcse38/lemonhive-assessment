@@ -26,6 +26,6 @@
     rgb(var(--background-start-rgb));
 } */
 .bg-image-line {
-  background-image: url("/bg-img/bg-img-1.png");
+  background-image: url("/bg-img/bg-img-1-removebg-preview.png");
   /* Add any other desired background properties */
 }
