@@ -1,3 +1,11 @@
+import catalog from "./assets/img/catalog.png";
+import circooles from "./assets/img/circooles.png";
+import gofore from "./assets/img/gofore.png";
+import layers from "./assets/img/layers.png";
+import quotient from "./assets/img/quotient.png";
+import sisyphus from "./assets/img/sisyphus.png";
+import skyplus from "./assets/img/skyplus.png";
+
 export const twiter = (
   <svg
     width="24"
@@ -73,3 +81,69 @@ export const web = (
     />
   </svg>
 );
+
+export const sponsors = [
+  {
+    id: 1,
+    badge: "🥇 Gold Sponsor",
+    logos: [
+      {
+        id: 1,
+        image: layers,
+        name: "layers",
+      },
+      {
+        id: 2,
+        image: sisyphus,
+        name: "sisyphus",
+      },
+    ],
+  },
+  {
+    id: 2,
+    badge: "🥈 Silver Sponsors",
+    logos: [
+      {
+        id: 1,
+        image: circooles,
+        name: "circooles",
+      },
+      {
+        id: 2,
+        image: catalog,
+        name: "catalog",
+      },
+      {
+        id: 3,
+        image: gofore,
+        name: "gofore",
+      },
+    ],
+  },
+  {
+    id: 3,
+    badge: "🥉 Bronze Sponsors",
+    logos: [
+      {
+        id: 1,
+        image: sisyphus,
+        name: "sisyphus",
+      },
+      {
+        id: 2,
+        image: quotient,
+        name: "quotient",
+      },
+      {
+        id: 3,
+        image: layers,
+        name: "layers",
+      },
+      {
+        id: 3,
+        image: circooles,
+        name: "circooles",
+      },
+    ],
+  },
+];

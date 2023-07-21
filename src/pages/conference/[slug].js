@@ -17,7 +17,7 @@ function Conference() {
   const { error, loading, data } = useGetDataById(CONFERENCE, slug);
 
   return (
-    <div className="my-10">
+    <div className="my-10 px-5">
       <div>
         <div className="space-y-4 mb-10 lg:mb-14">
           <h3 className="font-bold text-5xl text-midnight">

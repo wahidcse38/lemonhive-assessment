@@ -15,7 +15,7 @@ function Layout({ children }) {
   return (
     <div className={`${inter.className}`}>
       <Hero />
-      <main className="container px-5">{children}</main>
+      <main className="">{children}</main>
       <Footer />
     </div>
   );

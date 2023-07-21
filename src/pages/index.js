@@ -8,6 +8,7 @@ import { RotatingLines } from "react-loader-spinner";
 //Component
 import ConferencesForSmallDevices from "@/components/home/conferences/ConferencesForSmallDevices";
 import ConferencesForLargeDevices from "@/components/home/conferences/ConferencesForLargeDevices";
+import SponsorsSection from "./../components/home/sponsors/SponsorsSection";
 
 export default function Home() {
   const [conf, setConf] = useState([]);
@@ -27,7 +28,7 @@ export default function Home() {
   }, [data]);
 
   return (
-    <div className="container">
+    <div className="">
       {loading && (
         <div className="h-screen flex justify-center items-center">
           <RotatingLines
@@ -40,11 +41,14 @@ export default function Home() {
           />
         </div>
       )}
-      <div className="block md:hidden">
+      <div className="block md:hidden container px-5">
         <ConferencesForSmallDevices conf={conf} />
       </div>
-      <div className="hidden md:block">
+      <div className="hidden md:block container px-5">
         <ConferencesForLargeDevices conf={conf} />
+      </div>
+      <div>
+        <SponsorsSection />
       </div>
     </div>
   );
