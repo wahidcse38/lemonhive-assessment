@@ -23,6 +23,7 @@ module.exports = {
         azul: "#2563EB",
         mistBlue: "#617187",
         pastelGrey: "#CDCDCD",
+        borderGrey: "#D9D9D9",
         light: "#F9FAFB",
         midnight: "#0A142F",
       },

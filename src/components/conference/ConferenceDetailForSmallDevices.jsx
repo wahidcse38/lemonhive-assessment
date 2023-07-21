@@ -8,22 +8,42 @@ function ConferenceDetailForSmallDevices({ conference }) {
       {
         id: 1,
         name: "Organizer",
-        data: obj?.organizers,
+        data: obj?.organizers.map((item, i) => {
+          return {
+            ...item,
+            id: i + 1,
+          };
+        }),
       },
       {
         id: 2,
         name: "Speakers",
-        data: obj?.speakers,
+        data: obj?.speakers.map((item, i) => {
+          return {
+            ...item,
+            id: i + 1,
+          };
+        }),
       },
       {
         id: 3,
         name: "Schedule",
-        data: obj?.schedules,
+        data: obj?.schedules.map((item, i) => {
+          return {
+            ...item,
+            id: i + 1,
+          };
+        }),
       },
       {
         id: 4,
         name: "Sponsors",
-        data: obj?.sponsors,
+        data: obj?.sponsors.map((item, i) => {
+          return {
+            ...item,
+            id: i + 1,
+          };
+        }),
       },
     ];
   };
